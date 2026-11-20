@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Physical Computing Fall 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {
+  font-family: "Poppins", sans-serif
+  }
+body {
+  font-size:16px;
+  }
+h1 { 
+  font-size:30px;
+  }
+h2 {
+  font-size:25px;
+  }
+  h3 {
+  font-size:18px;
+  }
+img {
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;;
+}
+.w3-half img{
+  margin-bottom:-6px;
+  margin-top:16px;
+  opacity:0.8;
+  cursor:pointer
+  } */
+.w3-half img:hover{
+  opacity:1
+  }
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-display-topleft" style="display:none;font-size:22px"></a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>IXD<br>DESN 30146<br>Fall 2026</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#Module2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 2</a> 
+    <a href="#Workshop1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Workshop 1</a> 
+    <a href="#Workshop2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Workshop 2</a>
+    <a href="#Activity1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 1</a> 
+    <a href="#Activity2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 2</a>
+    <a href="#AdditionalResearch" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Additional Research or Workshops</a>
+    <a href="#Project2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project 2 Prototype</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens
+<header class="w3-container w3-top w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Menu</span>
+</header> -->
+
+<!-- 
+  if you want to link your image to a video use one of the following alt links as an example:
+
+  alt="test1Lorem ipsum dolor sit amet, consectetur adipiscing elit test1Lorem ipsum dolor sit amet, consectetur adipiscing elit <a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+  alt="test2Lorem ipsum dolor sit amet, consectetur adipiscing elit <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+
+-->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:220px;margin-right:20px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="default">
+    <h1 class="w3-jumbo" id="Home"><b>Physical Computing</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Weekly Activity Template</b></h1>
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Ziqi Zhou</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+  </div>
+  <!-- Boilerplate -->
+  <div id="Module2" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Module 2</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>My Activity Research</h2>
+    <h3>
+In Workshop 1, I made a stand out of cardboard to explore how screens are placed and fixed. <br>
+		
+In Workshop 2, I brainstormed the idea of the humidity lamp and made an arched cardboard prototype. I cut out irregular observation Windows on the front side and used fish school photos to simulate the picture of the Project 1 concept to explore how the original fish school concept can be combined with the physical lights.<br>
+
+In Activity 1, I mainly tested the original fish projection scheme. Since TouchDesigner wasn't working as well as expected, I developed an alternative based on Workshop 2: a tablet or computer display of the shoals, with a physical humidity light.<br>
+
+In Activity 2, I made the switch page with ProtoPie, and I wrote the code to control the lights and detect the humidity in the Arduino IDE, which I am still debugging. I am also continuing to explore how to integrate sensor data into TouchDesigner and combine it with the original fish screen to gradually improve the interactive prototype.
+    </h3>
+  </div>
+  
+  <!-- Project 1 Photo grid (modal) -->
+  <div id="Workshop1" >
+    <h2>Workshop 1 Geurilla Prototyping I</h2>
+    <div class="grid">
+      <img src="images/Workshop1/1.png" style="width:100%" onclick="onClick(this)" alt="We prepared corrugated cardboard, scissors, a marker, a cutting mat, and a hot glue gun. <a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+      <img src="images/Workshop1/2.png" style="width:100%" onclick="We cut out the triangular side panels, the rectangular back panel, and the smaller cardboard pieces. <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+      <img src="images/Workshop1/3.png" style="width:100%" onclick="onClick(this)" alt="We glued the pieces together to form an angled backrest and a front ledge to hold the phone.">
+      <img src="images/Workshop1/4.png" style="width:100%" onclick="onClick(this)" alt="We placed the phone horizontally on the stand to check how it rested against the back panel and front ledge.">
+      <img src="images/Workshop1/5.png" style="width:100%" onclick="onClick(this)" alt="We reinforced the raised ledge with triangular braces and checked that the charging cable could fit through the centre gap.">
+    </div>
+  </div>
+  
+  <div id="Workshop2" class="w3-row-padding">
+    <h2>Workshop 2 Geurilla Prototyping II</h2>
+    <div class="grid">
+      <img src="images/Workshop2/6.png" style="width:100%" onclick="onClick(this)" alt="I drew three types of shells, namely a rectangular shell with a base, an arched shell with an irregular opening, and a tilted screen supported by a tripod. These sketches help me compare the placement of the screens and how much space the casing can leave for the lights and sensors.">
+      <img src="images/Workshop2/7.png" style="width:100%" onclick="onClick(this)" alt="Around the concept of project 1, I thought of five ways of interaction: controlling the projection of the fish school with both hands, changing the picture of the fish school with a knob, covering the light sensor to make the fish school appear, approaching the device to trigger the fish school to swim, and combining the dynamic fish school with the physical humidity lamp. The last idea could also be to display the school of fish on a tablet or computer as an alternative to the projection scheme.">
+      <img src="images/Workshop2/8.png" style="width:100%" onclick="onClick(this)" alt="I made a cardboard model of the arch scheme and cut out an irregular viewing window on the front. Since the effect of the school of fish in TouchDesigner did not meet expectations, I first used the photo of the school of fish to simulate the concept of Project 1 and observe what the audience would see through the window. This photo documents my initial tests of shell styling and window shape.">
+      <img src="images/Workshop2/9.png" style="width:100%" onclick="onClick(this)" alt="The back model shows the thickness of the shell, the position of the base and the opening. If I use 3D modeling to make the shell later, I will leave ventilation holes on the side or back of the humidity sensor and test whether the reading will be affected after it is installed in the shell.">
+      <img src="images/Workshop2/10.png" style="width:100%" onclick="onClick(this)" alt="I used ChatGPT to generate concept images of my ideas, preview how the three shells would look, and how the fish layer, monochrome LED, slab, and Arduino Sensor Kit would fit together. One idea is to place the LED in front of the panel and the Kit with the humidity sensor in the back of the panel, as shown in the previous image.">
+    </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="Activity1" >
+    <h2>Activity 1: My Resarch</h2>
+    <div class="grid">
+      <img src="images/Activity1/11.png" style="width:100%" onclick="onClick(this)" alt="I set up a hand tracking process in TouchDesigner to test whether the camera could recognize hand movements and provide input for the interaction of fish schools.<a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+      <img src="images/Activity1/12.png" style="width:100%" onclick="onClick(this)" alt="I opened my palm in front of the camera and observed whether the tracking marks in the picture could follow the movement of my fingers and palm. <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+      <img src="images/Activity1/13.png" style="width:100%" onclick="onClick(this)" alt="I combined the gesture tracking screen with the fish preview to test the effect of the fish gradually emerging when I clenched my fist.">
+      <img src="images/Activity1/14.png" style="width:100%" onclick="onClick(this)" alt="I connected and adjusted the nodes of the fish school animation in TouchDesigner, checked the picture output, and prepared for the subsequent interactive and projection tests.">
+      <img src="images/Activity1/15.png" style="width:100%" onclick="onClick(this)" alt="Observe whether the tracking marks in the picture can follow the movement of fingers and palms.">
+    </div>
+  </div>
+
+  <div id="Activity2" class="w3-row-padding">
+    <h2>Activity 2: My Reearch</h2>
+    <div class="grid">
+      <img src="images/Activity2/16.png" style="width:100%" onclick="onClick(this)" alt="I created the Ocean Lamp Control mobile page in ProtoPie to preview how viewers turn on and off physical lights.">
+      <img src="images/Activity2/17.png" style="width:100%" onclick="onClick(this)" alt="I designed two interface states. When the lamp is turned off, the lamp pattern darkens and the button says "Turn on lamp". When the light is turned on, the pattern lights up and the button says "Turn off lamp".">
+      <img src="images/Activity2/18.png" style="width:100%" onclick="onClick(this)" alt="I wrote the code for reading humidity and controlling leds in the Arduino IDE, attempting to make the physical lights respond to changes in indoor humidity.">
+      <img src="images/Activity2/19.png" style="width:100%" onclick="onClick(this)" alt="First, I debugged the switch logic of the monochrome LED to check if the Arduino could light it up and turn it off as set. This part is still under testing at present.">
+      <img src="images/Activity2/20.png" style="width:100%" onclick="onClick(this)" alt="I checked the humidity reading through the serial monitor of the Arduino to see if the value could be continuously updated, preparing for the subsequent lighting control and TouchDesigner tests.">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="AdditionalResearch" class="w3-row-padding">
+    <h2>Additional Research or Workshops</h2>
+    <div class="grid">
+      <img src="images/AdditionalResearch/21.png" style="width:100%" onclick="onClick(this)" alt="I made a tilted screen stand out of cardboard and explored how to place and fix the screen, as well as the Angle when viewed from the front.">
+      <img src="images/AdditionalResearch/22.png" style="width:100%" onclick="onClick(this)" alt="During the testing process, an error occurred at one node of TouchDesigner.">
+      <img src="images/AdditionalResearch/23.png" style="width:100%" onclick="onClick(this)" alt="I cut out irregular viewing Windows on the front of the arched cardboard enclosure. Since TouchDesigner's shoal-fish effect wasn't as good as expected, I first used photos to simulate how Project 1 would look through the window.">
+      <img src="images/AdditionalResearch/24.png" style="width:100%" onclick="onClick(this)" alt="I tested a monochrome LED with Arduino Uno and considered placing it in front of the screen to present the light through the observation window.">
+      <img src="images/AdditionalResearch/25.png" style="width:100%" onclick="onClick(this)" alt="I plan to place the Arduino Sensor Kit with a humidity sensor behind the screen and reserve openings on the side or back of the housing to allow the sensor to come into contact with the indoor air.">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+  <!-- Boilerplate -->
+  <div id="Project2" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 2</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Project 2 Prototype</h2>
+    <p>Plan 1 is the main direction in which the Project 2 prototype continues to develop. The left image shows me testing the gesture and fish screen in TouchDesigner. I hope that as you clench your left hand, the fish will emerge from the shadows. When the audience opens their right hand and moves their palm, the fish will follow the palm and change the swimming direction. With these two movements, I want the audience to first detect the school of fish from the dark, and then use hand gestures to guide them to swim.<br>
+
+Next, I will continue to debug gesture recognition and the fish animation, focusing on whether the two actions can stably trigger the corresponding screen. I will also continue to adjust the projection to see if the fish emerge clearly from the dark and if the projection gives me the dark sea atmosphere I want.<br><br>
+
+Plan 2 (Alternative): Physical humidity lamp<br>
+The image on the right shows an alternative for when the drop shadow is still not as good as expected. If I used this solution, I would try to display TouchDesigner's dynamic school of fish on a tablet or computer and keep the original gesture interaction. The components in the diagram are planned combinations.<br>
+1. Scrub or clear front plate <br>
+The arched frame and irregular opening of the cardboard model continue, allowing the audience to look underwater through a window. I will compare the two materials to see which one can soften the light while preserving the clarity of the fish. <br>
+2. Clear fillets <br>
+Add a fixed silhouette of the school of fish on the transparent sheet to form a front and back layer with the school of fish swimming in the rear screen. <br>
+3. LED lights <br>
+Put the LED behind the transparent fish and in front of the screen. I will first use a monochrome LED to test whether it can be switched on and off according to the humidity reading, and then consider using different colors to correspond to different humidity ranges. <br>
+Step 4: Screen <br>
+Display TouchDesigner's dynamic school of fish on a tablet or computer, allowing viewers to see the picture up close through a window.<br>
+5. Arduino Sensor Kit <br>
+The Kit with the humidity sensor is placed behind the screen, and a wire is connected to the LED in the front, leaving room for the fish and lights on the front.
+6. Rear shell and vent <br><br>
+In the future, if I use 3D modeling to make the shell, I will reserve a vent near the sensor and compare the humidity readings before and after loading the shell to determine the location and size of the opening.
+    </p>
+    <img src="images/final/26.png" style="width:100%" onclick="onClick(this)" alt="Left, documenting a gesture test I conducted for Project 1 concept. In TouchDesigner, I tried to make a fist with my left hand to make the shoal emerge from the shadows, and then use my open right hand to guide the shoal. On the right, this assisted Ai concept is my alternate plan for when the projection doesn't work as expected. My idea is to have a shoal of fish on an inbuilt screen with a physical light that senses humidity inside the room.">
+  </div>
+  
+   <!-- Modal for full size images on click-->
+   <div id="modal01" class="w3-modal w3-grey" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-center w3-transparent" style ="padding:20px">
+      <img id="img01" class="w3-image">
+      <h2 id="caption"></h2>
+
+      <!-- <div id="urLink"></div> -->
+      <!-- <a id="urLink" class="container"><iframe class="responsive-iframe"></iframe></a> -->
+    <!-- </div> -->
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+
+  // var captionUrl = document.getElementById("urLink");
+  // captionUrl.innerHTML = element.url;
+
+  //document.getElementById("urLink").src = element.url;
+}
+</script>
+
+</body>
+</html>
